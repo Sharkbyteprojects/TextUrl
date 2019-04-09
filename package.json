@@ -1,11 +1,15 @@
 {
-  "name": "TextUrl",
+  "name": "text-url",
   "version": "1.0.0",
   "description": "UPLOAD URL",
   "main": "index.js",
   "scripts": {
     "test": "node --inspect index.js",
-    "start": "node index.js"
+    "start": "node index.js",
+    "minify": "gulp js&&gulp jsr&&gulp jsrd",
+    "css": "gulp css",
+    "gulp": "npm run-script minify&&npm run-script csst",
+    "allt": "npm run-script gulp&&npm test"
   },
   "author": "Sharkbyteprojects",
   "license": "ISC",
@@ -16,5 +20,11 @@
     "handlebars": "^4.1.1",
     "helmet": "^3.16.0",
     "morgan": "^1.9.1"
+  },
+  "devDependencies": {
+    "gulp": "^4.0.0",
+    "gulp-less": "^4.0.1",
+    "gulp-rename": "^1.4.0",
+    "gulp-uglify": "^3.0.2"
   }
 }
