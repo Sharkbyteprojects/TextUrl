@@ -3,6 +3,7 @@ const morgan = require('morgan');
 const helmet = require('helmet');
 const exphbs = require('express-handlebars');
 const bpars = require('body-parser');
+var users = 0;
 const PORT = process.env.PORT || 5000
 const prochelp = require('./manager/main_process');//MAN
 const app = express();
@@ -58,6 +59,7 @@ app.get('/delete/:id', (request, response) => {
     }
 });
     app.post('/new', (request, response) => {//ADD
+	    users++;
         const now = new Date().getTime();
         const mess = request.body.title.replace(" ", "");
         if (mess.length != 0) {
@@ -74,6 +76,9 @@ app.get('/delete/:id', (request, response) => {
             response.status(403);
             response.redirect('/');
         }
+  });
+  app.get('/countraw', (req, res) =>{
+	  response.send("Users: " + users);
   });
     app.use(express.static(__dirname + '/content')); //STATIC
     app.get('/*', (request, response) => {//                                                 ^
