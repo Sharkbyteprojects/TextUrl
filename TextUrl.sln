@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.438
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BC}") = "TextUrl", "txturl.njsproj", "{F68CA617-485D-4A00-B050-BB707398A7CF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F68CA617-485D-4A00-B050-BB707398A7CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F68CA617-485D-4A00-B050-BB707398A7CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F68CA617-485D-4A00-B050-BB707398A7CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F68CA617-485D-4A00-B050-BB707398A7CF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C08E4CB9-364C-47C4-894F-194B0750918F}
+	EndGlobalSection
+EndGlobal

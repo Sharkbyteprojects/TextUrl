@@ -1,0 +1,20 @@
+{
+  "name": "TextUrl",
+  "version": "1.0.0",
+  "description": "UPLOAD URL",
+  "main": "index.js",
+  "scripts": {
+    "test": "node --inspect index.js",
+    "start": "node index.js"
+  },
+  "author": "Sharkbyteprojects",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "express-handlebars": "^3.0.2",
+    "handlebars": "^4.1.1",
+    "helmet": "^3.16.0",
+    "morgan": "^1.9.1"
+  }
+}
