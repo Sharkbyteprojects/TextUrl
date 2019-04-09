@@ -8,7 +8,8 @@
     "start": "node index.js",
     "css": "gulp css",
     "gulp": "npm run-script csst",
-    "allt": "npm run-script gulp&&npm test"
+    "allt": "npm run-script gulp&&npm test",
+	"heroku": "node heroku.js
   },
   "author": "Sharkbyteprojects",
   "license": "ISC",
