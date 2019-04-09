@@ -4,4 +4,8 @@
 
 With the help of our applikatin you offer users the chance to turn text into urls. It stores text and offers the possibility to delete the message to anyone who knows the random link or id.
 
-[NPM](https://www.npmjs.com/package/text-url)
+## [Docker](https://hub.docker.com/r/shark2byte/text-url)
+
+## NPM:
+
+[![NPM](https://img.shields.io/npm/v/user-counter.svg) ![](https://img.shields.io/npm/dm/user-counter.svg)](https://www.npmjs.com/package/text-url)
