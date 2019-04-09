@@ -3,6 +3,7 @@ const morgan = require('morgan');
 const helmet = require('helmet');
 const exphbs = require('express-handlebars');
 const bpars = require('body-parser');
+const PORT = process.env.PORT || 5000
 const prochelp = require('./manager/main_process');//MAN
 const app = express();
     app.use(helmet());
@@ -84,6 +85,6 @@ app.get('/delete/:id', (request, response) => {
         response.status(404);//                                                              |
         response.render(__dirname + '/pages/404.handlebars', { mode: "post", url: urlenc });//404
     });
-    app.listen(5000, () => {
+    app.listen(PORT, () => {
         console.log("SERVER ONLINE ON http://localhost:5000/");
     });
