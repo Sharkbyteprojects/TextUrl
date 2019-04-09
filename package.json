@@ -1,14 +1,13 @@
 {
   "name": "text-url",
-  "version": "1.0.0",
+  "version": "3.0.0",
   "description": "UPLOAD URL",
   "main": "index.js",
   "scripts": {
     "test": "node --inspect index.js",
     "start": "node index.js",
-    "minify": "gulp js&&gulp jsr&&gulp jsrd",
     "css": "gulp css",
-    "gulp": "npm run-script minify&&npm run-script csst",
+    "gulp": "npm run-script csst",
     "allt": "npm run-script gulp&&npm test"
   },
   "author": "Sharkbyteprojects",
@@ -24,7 +23,6 @@
   "devDependencies": {
     "gulp": "^4.0.0",
     "gulp-less": "^4.0.1",
-    "gulp-rename": "^1.4.0",
-    "gulp-uglify": "^3.0.2"
+    "gulp-rename": "^1.4.0"
   }
 }
