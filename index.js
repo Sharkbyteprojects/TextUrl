@@ -27,6 +27,20 @@ const app = express();
             response.render(__dirname + '/pages/show.handlebars', { title: "TextUrl", id: ido, usermess: message, userdeft: title });
         }
     });
+    app.get('/userdef/raw/:id', (request, response) => {
+        const ido = parseInt(request.params.id, 10);
+        const all = prochelp.becomenum(ido);
+        if (all == undefined || all == null) {
+            const failue = `404 Can't find ${ido}`;
+            response.status(404);
+            response.send(failue)
+        } else {
+            const message = prochelp.read(request.params.id, "message");
+            const title = prochelp.read(request.params.id, "title");
+            const raw = {title: title, message: message}
+            response.send(raw);
+        }
+    });
  
 app.post('/get', (request, response) => {
     const mess = request.body.id;

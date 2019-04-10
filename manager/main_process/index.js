@@ -11,6 +11,9 @@ function save(data) {
 function read(id, name) {
     return arrays.reade(id, name);
 }
+function rea(id){
+    return arrays.read(id);
+}
 function set(array) {
     arrays.set(array);
 }
@@ -24,4 +27,5 @@ module.exports = {
     becomenum,
     set,
     serdelete,
+    rea,
 };
