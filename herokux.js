@@ -32,7 +32,7 @@ const app = express();
         const ido = parseInt(request.params.id, 10);
         const all = prochelp.becomenum(ido);
         if (all == undefined || all == null) {
-            const failue = `404 Can't find ${ido}`;
+            const failue = `404 Can't find ID "${ido}"`;
             response.status(404);
             response.send(failue)
         } else {
