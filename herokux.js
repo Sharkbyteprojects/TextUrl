@@ -84,5 +84,5 @@ app.get('/delete/:id', (request, response) => {
         response.render(__dirname + '/pages/404.handlebars', { mode: "post", url: urlenc });//404
     });
     app.listen(PORT, () => {
-        console.log("SERVER ONLINE ON http://localhost:5000/");
+        console.log("SERVER ONLINE ON http://localhost:" + PORT + "/");
     });
