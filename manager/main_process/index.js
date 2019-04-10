@@ -1,4 +1,11 @@
 ﻿const arrays = require('./data');
+const repos = {
+    github: 'https://github.com/Sharkbyteprojects/TextUrl',
+    bitbucket: 'https://bitbucket.org/sharkbytepro/texturl/',
+    npm: 'https://www.npmjs.com/package/text-url',
+    docker: 'https://hub.docker.com/r/shark2byte/text-url',
+    chat: 'https://gitter.im/Sharkbyteprojects/TextUrl?utm_source=share-link&utm_medium=link&utm_campaign=share-link'
+};
 function becomeData() {
     return arrays.readall();
 }
@@ -19,6 +26,8 @@ function set(array) {
 }
 function serdelete (number){
     arrays.change(number, null);
+}function rep (){
+    return repos;
 }
 module.exports = {
     becomeData,
@@ -28,4 +37,5 @@ module.exports = {
     set,
     serdelete,
     rea,
+    rep,
 };

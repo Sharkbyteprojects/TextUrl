@@ -87,6 +87,25 @@ app.get('/delete/:id', (request, response) => {
             response.redirect('/');
         }
   });
+  const repos = prochelp.rep();
+app.get('/github', (request, response) => {
+    response.status(307);
+    response.redirect(repos.github);
+});
+app.get('/bit', (request, response) => {
+    response.status(307);
+    response.redirect(repos.bitbucket);
+});
+app.get('/npm', (request, response) => {
+    response.status(307);
+    response.redirect(repos.npm);
+});app.get('/docker', (request, response) => {
+    response.status(307);
+    response.redirect(repos.docker);
+});app.get('/chat', (request, response) => {
+    response.status(307);
+    response.redirect(repos.chat);
+});
     app.use(express.static(__dirname + '/content')); //STATIC
     app.get('/*', (request, response) => {//                                                 ^
         const urlenc = request.path;//                                                       |
