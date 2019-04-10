@@ -1,0 +1,6 @@
+# robots.txt to TextUrl
+ User-agent: *
+ Disallow: /userdef/
+ Disallow: /get/
+ Disallow: /userdef
+ Disallow: /get
