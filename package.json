@@ -9,7 +9,7 @@
     "css": "gulp css",
     "gulp": "npm run-script csst",
     "allt": "npm run-script gulp&&npm test",
-	"heroku": "node heroku.js"
+	"heroku": "node herokux.js"
   },
   "author": "Sharkbyteprojects",
   "license": "ISC",
