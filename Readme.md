@@ -12,6 +12,8 @@ With the help of our applikatin you offer users the chance to turn text into url
 
 [![NPM](https://img.shields.io/npm/v/text-url.svg) ![](https://img.shields.io/npm/dm/text-url.svg)](https://www.npmjs.com/package/text-url)
 
+[Example to use it over npm](https://bitbucket.org/sharkbytepro/texturl-for-npm-use)
+
 ---
 
 ![](https://files.gitter.im/Sharkbyteprojects/TextUrl/5gAQ/desk.PNG)
