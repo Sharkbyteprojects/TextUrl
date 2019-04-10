@@ -1,6 +1,6 @@
 {
   "name": "text-url",
-  "version": "4.0.0",
+  "version": "6.0.0",
   "description": "UPLOAD URL",
   "main": "index.js",
   "scripts": {
