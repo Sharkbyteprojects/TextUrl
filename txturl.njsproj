@@ -30,6 +30,7 @@
     <DebugSymbols>true</DebugSymbols>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="heroku.js" />
     <Compile Include="index.js" />
     <Compile Include="manager\main_process\data.js">
       <SubType>Code</SubType>
