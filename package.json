@@ -1,7 +1,7 @@
 {
   "name": "text-url",
-  "version": "7.0.0",
-  "description": "UPLOAD URL",
+  "version": "8.0.0",
+  "description": "Create deletable urls from texts",
   "main": "index.js",
   "scripts": {
     "test": "node --inspect index.js",
