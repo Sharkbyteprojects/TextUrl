@@ -19,18 +19,15 @@ const app = express();
         const ido = parseInt(request.params.id, 10);
         const all = prochelp.becomenum(ido);
         if (all == undefined || all == null) {
-            response.redirect('/404/' + request.params.id);
+            response.status(404);
+            response.render(__dirname + '/pages/dne.handlebars', {id: ido});
         } else {
             const message = prochelp.read(request.params.id, "message");
             const title = prochelp.read(request.params.id, "title");
             response.render(__dirname + '/pages/show.handlebars', { title: "TextUrl", id: ido, usermess: message, userdeft: title });
         }
     });
-    app.get('/404/:id', (request, response) => {
-        const ido = parseInt(request.params.id, 10);
-        response.status(404);
-        response.render(__dirname + '/pages/dne.handlebars', {id: ido});
-});
+ 
 app.post('/get', (request, response) => {
     const mess = request.body.id;
     if (mess.length != 0) {
@@ -49,7 +46,8 @@ app.get('/delete/:id', (request, response) => {
     const ido = parseInt(request.params.id, 10);
     const all = prochelp.becomenum(ido);
     if (all == undefined || all == null) {
-        response.redirect('/404/' + request.params.id);
+        response.status(404);
+        response.render(__dirname + '/pages/dne.handlebars', { id: ido });
     } else {
         prochelp.serdelete(ido);
         response.status(307);
