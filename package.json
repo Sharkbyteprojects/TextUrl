@@ -1,6 +1,6 @@
 {
   "name": "text-url",
-  "version": "6.0.0",
+  "version": "7.0.0",
   "description": "UPLOAD URL",
   "main": "index.js",
   "scripts": {
@@ -9,7 +9,7 @@
     "css": "gulp css",
     "gulp": "npm run-script csst",
     "allt": "npm run-script gulp&&npm test",
-	"heroku": "node herokux.js"
+    "heroku": "node herokux.js"
   },
   "author": "Sharkbyteprojects",
   "license": "ISC",
@@ -30,7 +30,7 @@
   "bugs": {
     "url": "https://github.com/Sharkbyteprojects/TextUrl/issues"
   },
-"homepage": "https://github.com/Sharkbyteprojects/TextUrl#readme",
+  "homepage": "https://morning-tor-58273.herokuapp.com/",
   "devDependencies": {
     "gulp": "^4.0.0",
     "gulp-less": "^4.0.1",
