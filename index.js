@@ -66,7 +66,7 @@ app.get('/delete/:id', (request, response) => {
     } else {
         prochelp.serdelete(ido);
         response.status(307);
-        response.redirect('/#deleted id' + request.params.id);
+        response.redirect('/#deleted id ' + request.params.id);
     }
 });
     app.post('/new', (request, response) => {//ADD
@@ -105,6 +105,9 @@ app.get('/npm', (request, response) => {
 });app.get('/chat', (request, response) => {
     response.status(307);
     response.redirect(repos.chat);
+}); app.get('/gitlab', (request, response) => {
+    response.status(307);
+    response.redirect(repos.gitlab);
 });
     app.use(express.static(__dirname + '/content')); //STATIC
     app.get('/*', (request, response) => {//                                                 ^

@@ -99,6 +99,9 @@ app.get('/bit', (request, response) => {
 app.get('/npm', (request, response) => {
     response.status(307);
     response.redirect(repos.npm);
+}); app.get('/gitlab', (request, response) => {
+    response.status(307);
+    response.redirect(repos.gitlab);
 });app.get('/docker', (request, response) => {
     response.status(307);
     response.redirect(repos.docker);
