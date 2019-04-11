@@ -27,8 +27,20 @@ function generate(array) {
     return eval(`mains[${idno}].` + name);
 } function change(idno, array) {
     mains[idno] = array;
+    const runs = JSON.stringify(mains);
+    fs.writeFile("./data.json", runs, function (err) {
+        if (err) {
+            return console.log(err);
+        }
+    });
 } function changee(idno, name, array) {
-    eval(`mains[${idno}].${name} = ${array}`)
+    eval(`mains[${idno}].${name} = ${array}`);
+    const runs = JSON.stringify(mains);
+    fs.writeFile("./data.json", runs, function (err) {
+        if (err) {
+            return console.log(err);
+        }
+    });
 } function set(array) {
     mains = array;
     const runs = JSON.stringify(mains);
