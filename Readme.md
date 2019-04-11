@@ -16,4 +16,15 @@ With the help of our applikatin you offer users the chance to turn text into url
 
 ---
 
+## LINKS FOR DEVLOPERS:
+
+- [GITHUB](https://github.com/Sharkbyteprojects/TextUrl/)
+- [GitLab](https://gitlab.com/Sharkbyteprojects/text-url/)
+- [BitBucket](https://bitbucket.org/sharkbytepro/texturl/)
+- [NPM](https://www.npmjs.com/package/text-url)
+- [DOCKER](https://hub.docker.com/r/shark2byte/text-url)
+- [DEVLOPERCHAT](https://gitter.im/Sharkbyteprojects/TextUrl?utm_source=share-link&utm_medium=link&utm_campaign=share-link)
+
+---
+
 ![](https://files.gitter.im/Sharkbyteprojects/TextUrl/5gAQ/desk.PNG)
