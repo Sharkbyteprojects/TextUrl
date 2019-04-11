@@ -4,6 +4,7 @@ const helmet = require('helmet');
 const exphbs = require('express-handlebars');
 const bpars = require('body-parser');
 const prochelp = require('./manager/main_process');//MAN
+prochelp.start();
 const app = express();
     app.use(helmet());
     app.use(bpars.urlencoded({ extended: false }));

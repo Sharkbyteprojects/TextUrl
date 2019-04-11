@@ -9,7 +9,8 @@
     "css": "gulp css",
     "gulp": "npm run-script csst",
     "allt": "npm run-script gulp&&npm test",
-    "heroku": "node herokux.js"
+    "heroku": "node herokux.js",
+    "install": "echo [] > ./data.json"
   },
   "author": "Sharkbyteprojects",
   "license": "ISC",
@@ -25,8 +26,6 @@
     "type": "git",
     "url": "git+https://github.com/Sharkbyteprojects/TextUrl.git"
   },
-  "author": "Sharkbyteprojects",
-  "license": "ISC",
   "bugs": {
     "url": "https://github.com/Sharkbyteprojects/TextUrl/issues"
   },

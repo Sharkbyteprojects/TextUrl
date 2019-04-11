@@ -15,6 +15,9 @@ function becomenum(num) {
 function save(data) {
     return arrays.generate(data);
 }
+function start() {
+    return arrays.start();
+}
 function read(id, name) {
     return arrays.reade(id, name);
 }
@@ -38,4 +41,5 @@ module.exports = {
     serdelete,
     rea,
     rep,
+    start,
 };
