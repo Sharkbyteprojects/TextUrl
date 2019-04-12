@@ -34,6 +34,10 @@
     <a href="/docker" target="_blank">DOCKER</a>  | 
     <a href="/npm" target="_blank">NPM</a> | 
     <a href="/chat" target="_blank">Devloper-Chat</a></p>
-   
+   <script>	
+        if('serviceWorker' in navigator){
+            navigator.serviceWorker.register('/sw.js');
+        }
+     </script>
 </body>
 </html>
