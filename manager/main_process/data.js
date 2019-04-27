@@ -7,6 +7,8 @@ function start() {
     fs.readFile('./data.json', 'utf8', function (err, contents) {
         if (err) throw err;
         eval(`mains = ${contents}`);
+        num = mains.length;
+        countz = num;
     });
 }
 function generate(array) {
