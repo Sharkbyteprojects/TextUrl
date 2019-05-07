@@ -1,6 +1,6 @@
 {
   "name": "text-url",
-  "version": "16.0.0",
+  "version": "19.0.0",
   "description": "Create deletable urls from texts",
   "main": "index.js",
   "scripts": {
@@ -9,7 +9,7 @@
     "css": "gulp css",
     "gulp": "npm run-script csst",
     "allt": "npm run-script gulp&&npm test",
-    "heroku": "node herokux.js",
+    "heroku": "node index.js",
     "install": "echo [] > ./data.json"
   },
   "author": "Sharkbyteprojects",
@@ -20,6 +20,7 @@
     "express-handlebars": "^3.0.2",
     "handlebars": "^4.1.1",
     "helmet": "^3.16.0",
+    "jsontoxml": "^1.0.1",
     "morgan": "^1.9.1"
   },
   "repository": {

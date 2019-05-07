@@ -14,6 +14,18 @@ With the help of our applikatin you offer users the chance to turn text into url
 
 [Example to use it over npm](https://bitbucket.org/sharkbytepro/texturl-for-npm-use)
 
+
+---
+## API:
+Replace `id` with the id of the message
+
+Replace `host` with the hostname
+
+- Delete an Message: `http://host/delete/id`
+- Show raw Json of an Message: `http://host/userdef/raw/id`
+- Show raw XML of an Message: `http://host/userdef/rawml/id`
+
+
 ---
 
 ## LINKS FOR DEVLOPERS:
@@ -26,5 +38,4 @@ With the help of our applikatin you offer users the chance to turn text into url
 - [DEVLOPERCHAT](https://gitter.im/Sharkbyteprojects/TextUrl?utm_source=share-link&utm_medium=link&utm_campaign=share-link)
 
 ---
-
 ![](https://files.gitter.im/Sharkbyteprojects/TextUrl/5gAQ/desk.PNG)

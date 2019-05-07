@@ -30,7 +30,6 @@
     <DebugSymbols>true</DebugSymbols>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="herokux.js" />
     <Compile Include="index.js" />
     <Compile Include="manager\main_process\data.js">
       <SubType>Code</SubType>
@@ -44,6 +43,9 @@
     <Content Include="package.json" />
     <Content Include="content\ico.png" />
     <Content Include="pages\404.handlebars" />
+    <Content Include="pages\api.handlebars">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="pages\data.handlebars">
       <SubType>Code</SubType>
     </Content>
