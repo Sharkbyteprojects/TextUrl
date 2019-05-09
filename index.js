@@ -3,6 +3,8 @@ const morgan = require('morgan');
 const helmet = require('helmet');
 const exphbs = require('express-handlebars');
 const jsonXml = require('jsontoxml');
+const fs = require ('fs');
+const data = fs.readFileSync('./content/ang/index.html');
 const bpars = require('body-parser');
 const PORT = process.env.PORT || 80;
 const prochelp = require('./manager/main_process');//MAN
@@ -18,6 +20,7 @@ const app = express();
         //MAIN
         response.render(__dirname + '/pages/form.handlebars', { title: "TextUrl" });
     });
+    
     app.get('/userdef/:id', (request, response) => {
         const ido = parseInt(request.params.id, 10);
         const all = prochelp.becomenum(ido);
@@ -29,6 +32,12 @@ const app = express();
             const title = prochelp.read(request.params.id, "title");
             response.render(__dirname + '/pages/show.handlebars', { title: "TextUrl", id: ido, usermess: message, userdeft: title });
         }
+    });
+    app.get('/userdef/raw/', (request, response) => {
+            const raw = { title: "404", message: `We can't proceed with empty` }
+            const failue = raw;
+            response.status(404);
+            response.send(failue);
     });
     app.get('/userdef/raw/:id', (request, response) => {
         const ido = parseInt(request.params.id, 10);
@@ -45,6 +54,13 @@ const app = express();
             response.send(raw);
         }
     });
+    app.get('/userdef/seperate/:id', (request, response) => {
+        const ido = parseInt(request.params.id, 10);
+        const all = prochelp.becomenum(ido);
+        prochelp.read(request.params.id, "message")
+            response.send(prochelp.read(request.params.id, "title")+"--|||||||||--"+prochelp.read(request.params.id, "message"));
+        }
+    );
 app.get('/userdef/rawml/:id', (request, response) => {
     const ido = parseInt(request.params.id, 10);
     const all = prochelp.becomenum(ido);
@@ -126,6 +142,17 @@ app.post('/new/raw', (request, response) => {//ADD
         response.send(ids);
     
 });
+app.get('/new/query', (request, response) => {//ADD
+    const now = new Date().getTime();
+        const data = {
+            title: request.query.title,
+            message: request.query.message,
+            timestamp: now
+        };
+        const ids = prochelp.save(data).toString();;
+        response.send(ids);
+    
+});
 const repos = prochelp.rep();
 app.get('/github', (request, response) => {
     response.status(307);
@@ -149,6 +176,12 @@ app.get('/npm', (request, response) => {
     response.redirect(repos.gitlab);
 });
     app.use(express.static(__dirname + '/content')); //STATIC
+    app.get('/ang/*', (request, response) => {
+        response.set({
+            'Content-Type': 'text/html'
+        });
+        response.send(data);
+    });
     app.get('/*', (request, response) => {//                                                 ^
         const urlenc = request.path;//                                                       |
         response.status(404);//                                                              |
