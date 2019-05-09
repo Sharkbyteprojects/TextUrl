@@ -57,9 +57,12 @@ const app = express();
     app.get('/userdef/seperate/:id', (request, response) => {
         const ido = parseInt(request.params.id, 10);
         const all = prochelp.becomenum(ido);
+         if (all == undefined || all == null) {
+             response.send("404--|||||||||--NOT FOUND "+ido)
+              } else {
         prochelp.read(request.params.id, "message")
             response.send(prochelp.read(request.params.id, "title")+"--|||||||||--"+prochelp.read(request.params.id, "message"));
-        }
+        }}
     );
 app.get('/userdef/rawml/:id', (request, response) => {
     const ido = parseInt(request.params.id, 10);
