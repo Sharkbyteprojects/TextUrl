@@ -4,7 +4,7 @@ const helmet = require('helmet');
 const exphbs = require('express-handlebars');
 const jsonXml = require('jsontoxml');
 const bpars = require('body-parser');
-const PORT = process.env.PORT || 80
+const PORT = process.env.PORT || 80;
 const prochelp = require('./manager/main_process');//MAN
 prochelp.start();
 const app = express();
@@ -37,7 +37,7 @@ const app = express();
             const raw = { title: "404", message: `Can't find ${ido}` }
             const failue = raw;
             response.status(404);
-            response.send(failue)
+            response.send(failue);
         } else {
             const message = prochelp.read(request.params.id, "message");
             const title = prochelp.read(request.params.id, "title");
@@ -52,7 +52,7 @@ app.get('/userdef/rawml/:id', (request, response) => {
         const raw = { title: "404", message: `Can't find ${ido}` }
         const failue = jsonXml(raw);
         response.status(404);
-        response.send(failue)
+        response.send(failue);
     } else {
         const message = prochelp.read(request.params.id, "message");
         const title = prochelp.read(request.params.id, "title");
@@ -100,7 +100,7 @@ app.get('/delete/:id', (request, response) => {
     app.post('/new', (request, response) => {//ADD
         const now = new Date().getTime();
         const mess = request.body.title.replace(" ", "");
-        if (mess.length != 0) {
+        if (mess.length !== 0) {
             const data = {
                 title: request.body.title,
                 message: request.body.message,
@@ -114,7 +114,18 @@ app.get('/delete/:id', (request, response) => {
             response.status(403);
             response.redirect('/');
         }
-  });
+    });
+app.post('/new/raw', (request, response) => {//ADD
+    const now = new Date().getTime();
+        const data = {
+            title: request.body.title,
+            message: request.body.message,
+            timestamp: now
+        };
+        const ids = prochelp.save(data).toString();;
+        response.send(ids);
+    
+});
 const repos = prochelp.rep();
 app.get('/github', (request, response) => {
     response.status(307);
