@@ -17,6 +17,7 @@ function save(data) {
     return arrays.generate(data);
 }
 function start() {
+    console.log("Server Starting up");
     return arrays.start();
 }
 function read(id, name) {
