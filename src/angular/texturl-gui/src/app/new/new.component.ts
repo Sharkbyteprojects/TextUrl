@@ -18,6 +18,7 @@ export class NewComponent implements OnInit {
     requests.open("GET", "../new/query?title=" + titel + "&message=" + message);
     requests.addEventListener('load', function(event) {
       document.getElementById("changet").innerHTML = `<br><h2>ID:</h2><p>${requests.responseText}</p>`;
+      document.getElementById("form").innerHTML = `<!--DOCS-->`;
     });
     requests.send();
   }
