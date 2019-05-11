@@ -147,13 +147,20 @@ app.post('/new/raw', (request, response) => {//ADD
 });
 app.get('/new/query', (request, response) => {//ADD
     const now = new Date().getTime();
+    const titl = request.query.title;
+    const fail = (titl == null || titl == "" || titl == undefined || titl.replace(" ", "") == "");
+    if (!fail) {
         const data = {
-            title: request.query.title,
+            title: titl,
             message: request.query.message,
             timestamp: now
         };
         const ids = prochelp.save(data).toString();;
         response.send(ids);
+    } else {
+        response.status(404);
+        response.send("Failed");
+    }
     
 });
 const repos = prochelp.rep();

@@ -5,7 +5,9 @@ var countz = num;
 var max = countz + 1000;
 function start() {
     fs.readFile('./data.json', 'utf8', function (err, contents) {
-        if (err) throw err;
+        if (err) {
+            console.log("File not Exist");
+        }
         eval(`mains = ${contents}`);
         num = mains.length;
         countz = num;
