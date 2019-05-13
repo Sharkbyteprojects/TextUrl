@@ -11,7 +11,7 @@
  * See https://goo.gl/2aRDsh
  */
 
-importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.0/workbox-sw.js");
+importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 self.addEventListener('message', (event) => {
   if (event.data && event.data.type === 'SKIP_WAITING') {
@@ -71,7 +71,7 @@ self.__precacheManifest = [
   },
   {
     "url": "index.html",
-    "revision": "029472406d5bc806ee06532be09781f8"
+    "revision": "048bfae2f0d3f78d85d8852782fadee6"
   },
   {
     "url": "main.caddcff77b05c905e344.js",
@@ -79,7 +79,7 @@ self.__precacheManifest = [
   },
   {
     "url": "manifest.json",
-    "revision": "6da44f00d88dce3b5fec8dfbba428027"
+    "revision": "ddfa7c7dece4a01b6990111268f35284"
   },
   {
     "url": "polyfills.8bbb231b43165d65d357.js",
