@@ -8,7 +8,7 @@ const bpars = require('body-parser');
 const PORT = process.env.PORT || 80;
 const prochelp = require('./manager/main_process');//MAN
 prochelp.start();
-const data = fs.readFileSync('./content/ang/index.html');
+const data = fs.readFileSync(__dirname + '/content/ang/index.html');
 const app = express();
     app.use(helmet());
     app.use(bpars.urlencoded({ extended: false }));
