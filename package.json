@@ -1,6 +1,6 @@
 {
   "name": "text-url",
-  "version": "28.1.1",
+  "version": "28.1.2",
   "description": "Create deletable urls from texts",
   "main": "index.js",
   "scripts": {
@@ -15,7 +15,7 @@
   "author": "Sharkbyteprojects",
   "license": "ISC",
   "bin": {
-    "texturl": "node index.js"
+    "texturl": "index.js"
   },
   "dependencies": {
     "body-parser": "^1.18.3",
