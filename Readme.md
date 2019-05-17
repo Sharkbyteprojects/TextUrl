@@ -6,11 +6,11 @@
 
 With the help of our application you offer users the chance to turn text into urls. It stores text and offers the possibility to delete the message to anyone who knows the random link or id.
 
-## [Docker](https://hub.docker.com/r/shark2byte/text-url)
+## [Docker](https://hub.docker.com/r/shark2byte/text-url) ![](https://img.shields.io/docker/pulls/shark2byte/text-url.svg)
 
 ## NPM:
 
-[![NPM](https://img.shields.io/npm/v/text-url.svg) ![](https://img.shields.io/npm/dm/text-url.svg)](https://www.npmjs.com/package/text-url)
+[![NPM](https://img.shields.io/npm/v/text-url.svg) ![](https://img.shields.io/npm/dt/text-url.svg)](https://www.npmjs.com/package/text-url)
 
 [Example to use it over npm](https://bitbucket.org/sharkbytepro/texturl-for-npm-use)
 
