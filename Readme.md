@@ -4,7 +4,7 @@
 
 [Exampleserver](https://morning-tor-58273.herokuapp.com/)
 
-With the help of our applikatin you offer users the chance to turn text into urls. It stores text and offers the possibility to delete the message to anyone who knows the random link or id.
+With the help of our application you offer users the chance to turn text into urls. It stores text and offers the possibility to delete the message to anyone who knows the random link or id.
 
 ## [Docker](https://hub.docker.com/r/shark2byte/text-url)
 
