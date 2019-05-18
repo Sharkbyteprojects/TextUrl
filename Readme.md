@@ -9,6 +9,7 @@ With the help of our application you offer users the chance to turn text into ur
 ## [Docker](https://hub.docker.com/r/shark2byte/text-url) ![](https://img.shields.io/docker/pulls/shark2byte/text-url.svg) (NOT STABLE)
 
 ## NPM:
+Tested on Windows
 
 [![NPM](https://img.shields.io/npm/v/text-url.svg) ![](https://img.shields.io/npm/dt/text-url.svg)](https://www.npmjs.com/package/text-url)
 
