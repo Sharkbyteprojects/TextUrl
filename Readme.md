@@ -6,7 +6,7 @@
 
 With the help of our application you offer users the chance to turn text into urls. It stores text and offers the possibility to delete the message to anyone who knows the random link or id.
 
-## [Docker](https://hub.docker.com/r/shark2byte/text-url) ![](https://img.shields.io/docker/pulls/shark2byte/text-url.svg)
+## [Docker](https://hub.docker.com/r/shark2byte/text-url) ![](https://img.shields.io/docker/pulls/shark2byte/text-url.svg) (NOT STABLE)
 
 ## NPM:
 
