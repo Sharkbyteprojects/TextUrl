@@ -11,13 +11,15 @@ import { NewComponent } from './new/new.component';
 import { ShowComponent } from './show/show.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
+import { ErrorComponent } from './error/error.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavComponent,
     NewComponent,
-    ShowComponent
+    ShowComponent,
+    ErrorComponent
   ],
   imports: [
     BrowserModule,
