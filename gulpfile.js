@@ -8,3 +8,7 @@ task ('css', () => {
 	.pipe(less())
 	.pipe(dest(fileroot + 'content/build'));
 });
+task ('mvol', () => {
+  return src(fileroot + 'app/views/layouts/main.handlebars')
+	.pipe(dest('/app/views/layouts/main.handlebars'));
+});
