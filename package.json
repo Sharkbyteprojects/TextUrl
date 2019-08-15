@@ -1,6 +1,6 @@
 {
   "name": "text-url",
-  "version": "28.2.3",
+  "version": "28.2.4",
   "description": "Create deletable urls from texts",
   "main": "index.js",
   "scripts": {
