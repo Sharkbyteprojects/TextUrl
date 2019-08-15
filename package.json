@@ -9,7 +9,7 @@
     "css": "gulp css",
     "gulp": "npm run-script csst",
     "allt": "npm run-script gulp&&npm test",
-    "heroku": "gulp mvol&&node index.js",
+    "heroku": "node index.js",
     "install": "echo [] > ./data.json",
     "dev": "nodemon index.js"
   },
