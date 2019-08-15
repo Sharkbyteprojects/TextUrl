@@ -1,3 +1,6 @@
+//MAKE THE FOLLOWING FALSE WHEN you will have the complete app
+const half = true;
+
 const express = require('express');
 const morgan = require('morgan');
 const helmet = require('helmet');
@@ -18,7 +21,10 @@ const app = express();
     // **********************************
     app.get('/', (request, response) => {
         //MAIN
-        response.render(__dirname + '/pages/form.handlebars', { title: "TextUrl" });
+        if(!half){
+        response.render(__dirname + '/pages/form.handlebars', { title: "TextUrl" });}else{
+            response.redirect('/ang/');
+        }
     });
     
     app.get('/userdef/:id', (request, response) => {
