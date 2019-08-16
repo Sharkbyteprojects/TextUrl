@@ -1,5 +1,6 @@
-//MAKE THE FOLLOWING FALSE WHEN you will have the complete app
 const half = true;
+//Remove in line 3 the "//" to get the complete ui in /
+//half = false
 
 const express = require('express');
 const morgan = require('morgan');
