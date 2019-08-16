@@ -1,13 +1,35 @@
 import { Component, OnInit } from '@angular/core';
-
+import {ActivatedRoute} from '@angular/router';
 @Component({
   selector: 'app-show',
   templateUrl: './show.component.html',
   styleUrls: ['./show.component.css']
 })
 export class ShowComponent implements OnInit {
-  constructor() { }
+  constructor(private route: ActivatedRoute) {
+   }
   ngOnInit() {
+    var id:number;
+    this.route.queryParams.subscribe((params)=>{
+      const query = decodeURI(params['get']||'');
+      if(query != ''){
+      const nulmb = parseInt(query, 10);
+      this.get(nulmb);
+      id=nulmb;
+      }
+    });
+    this.route.queryParams.subscribe((paramss)=>{
+      const querys = decodeURI(paramss['delete']||"false");
+      if(querys == 'true'){
+        this.delete(id);
+      }
+    })
+  }
+  load(id:number){
+    document.location.search="?get="+id;
+  }
+  rmove(){
+    document.location.search=document.location.search+"&delete=true";
   }
   get(id:number){
     function sys(string: string){

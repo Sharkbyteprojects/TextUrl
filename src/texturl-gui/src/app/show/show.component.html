@@ -1,4 +1,4 @@
-<mat-form-field><input matInput placeholder="ID" type="number" #ids></mat-form-field><br>
-<button mat-button (click)="get(ids.value)">GET</button>
-<button mat-button (click)="delete(ids.value)">Delete</button>
+<mat-form-field><input matInput id="mainlm" placeholder="ID" type="number" #ids></mat-form-field><br>
+<button mat-button (click)="load(ids.value)">GET</button>
+<button mat-button (click)="rmove()">Delete</button>
 <hr><h1 id="changeh"></h1><br><p id="changet"></p>
