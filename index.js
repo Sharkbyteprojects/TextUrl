@@ -1,4 +1,4 @@
-const half = true;
+var half = true;
 //Remove in line 3 the "//" to get the complete ui in /
 //half = false
 
@@ -213,13 +213,4 @@ app.get('/npm', (request, response) => {
         response.render(__dirname + '/pages/404.handlebars', { mode: "delete", url: urlenc });//404
     }); app.put('/*', (request, response) => {//                                            ^
         const urlenc = request.path;//                                                       |
-        response.status(404);//                                                              |
-        response.render(__dirname + '/pages/404.handlebars', { mode: "put", url: urlenc });//404
-    }); app.copy('/*', (request, response) => {//                                            ^
-        const urlenc = request.path;//                                                       |
-        response.status(404);//                                                              |
-        response.render(__dirname + '/pages/404.handlebars', { mode: "copy", url: urlenc });//404
-    });
-app.listen(PORT, () => {
-    console.log("SERVER ONLINE ON http://localhost:" + PORT + "/");
-});
+        response.status(404);//                                                              
